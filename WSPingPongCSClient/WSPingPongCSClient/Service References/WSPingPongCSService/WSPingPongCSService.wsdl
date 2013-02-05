@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Ball_In">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ball_" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ball_InResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Ball_Out">
+        <s:complexType />
+      </s:element>
+      <s:element name="Ball_OutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ball_OutResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ball_Check">
+        <s:complexType />
+      </s:element>
+      <s:element name="Ball_CheckResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Ball_CheckResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Ball_InSoapIn">
+    <wsdl:part name="parameters" element="tns:Ball_In" />
+  </wsdl:message>
+  <wsdl:message name="Ball_InSoapOut">
+    <wsdl:part name="parameters" element="tns:Ball_InResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ball_OutSoapIn">
+    <wsdl:part name="parameters" element="tns:Ball_Out" />
+  </wsdl:message>
+  <wsdl:message name="Ball_OutSoapOut">
+    <wsdl:part name="parameters" element="tns:Ball_OutResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ball_CheckSoapIn">
+    <wsdl:part name="parameters" element="tns:Ball_Check" />
+  </wsdl:message>
+  <wsdl:message name="Ball_CheckSoapOut">
+    <wsdl:part name="parameters" element="tns:Ball_CheckResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WSPingPongCSServiceSoap">
+    <wsdl:operation name="Ball_In">
+      <wsdl:input message="tns:Ball_InSoapIn" />
+      <wsdl:output message="tns:Ball_InSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ball_Out">
+      <wsdl:input message="tns:Ball_OutSoapIn" />
+      <wsdl:output message="tns:Ball_OutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ball_Check">
+      <wsdl:input message="tns:Ball_CheckSoapIn" />
+      <wsdl:output message="tns:Ball_CheckSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSPingPongCSServiceSoap" type="tns:WSPingPongCSServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Ball_In">
+      <soap:operation soapAction="http://tempuri.org/Ball_In" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ball_Out">
+      <soap:operation soapAction="http://tempuri.org/Ball_Out" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ball_Check">
+      <soap:operation soapAction="http://tempuri.org/Ball_Check" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSPingPongCSServiceSoap12" type="tns:WSPingPongCSServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Ball_In">
+      <soap12:operation soapAction="http://tempuri.org/Ball_In" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ball_Out">
+      <soap12:operation soapAction="http://tempuri.org/Ball_Out" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ball_Check">
+      <soap12:operation soapAction="http://tempuri.org/Ball_Check" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSPingPongCSService">
+    <wsdl:port name="WSPingPongCSServiceSoap" binding="tns:WSPingPongCSServiceSoap">
+      <soap:address location="http://localhost:63517/WSPingPongCSService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSPingPongCSServiceSoap12" binding="tns:WSPingPongCSServiceSoap12">
+      <soap12:address location="http://localhost:63517/WSPingPongCSService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
