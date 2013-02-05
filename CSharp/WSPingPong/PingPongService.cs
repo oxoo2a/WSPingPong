@@ -1,12 +1,10 @@
 ﻿namespace WSPingPong
 {
     using System;
-    using System.Diagnostics;
 
     public class PingPongService : IPingPongService
     {
         private string _ball;
-        private int _round = 0;
 
         /// <summary>
         /// Receives a ball and sets the server-side ball to it.
@@ -15,7 +13,7 @@
         public void Ball_In(string ball)
         {
             _ball = ball;
-            Debug.WriteLine("I got a ball: ({0})", _ball);
+            Console.WriteLine("I got a ball: ({0})", _ball);
         }
 
         /// <summary>
@@ -26,7 +24,7 @@
         {
             var ret = _ball;
             _ball = String.Empty;
-            Debug.WriteLine("Here is your ball: ({0})", ret);
+            Console.WriteLine("Here is your ball: ({0})", ret);
             return ret;
         }
 
