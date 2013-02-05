@@ -6,11 +6,26 @@
     [ServiceContract]
     public interface IPingPongService
     {
+        /// <summary>
+        /// Receives a ball and sets the server-side ball to it.
+        /// </summary>
+        /// <param name="ball">The ball to receive.</param>
         [OperationContract]
         void Ball_In(string ball);
 
+        /// <summary>
+        /// Gives the server-side ball to the client asking for it and empties the local variable.
+        /// </summary>
+        /// <returns>The ball as string.</returns>
         [OperationContract]
         string Ball_Out(); // no ball arrived if the empty string is returned.
+
+        /// <summary>
+        /// Checks whether there is a server-side ball available to send out.
+        /// </summary>
+        /// <returns>Whether there exists a ball on the server.</returns>
+        [OperationContract]
+        bool Ball_Available();
     }
 
 }
