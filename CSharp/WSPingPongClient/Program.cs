@@ -1,4 +1,4 @@
-﻿namespace WSPingPongCSClient
+﻿namespace WSPingPongClient
 {
     using System;
     using System.Threading;

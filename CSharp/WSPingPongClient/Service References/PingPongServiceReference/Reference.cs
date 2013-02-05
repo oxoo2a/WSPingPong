@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WSPingPongCSClient.PingPongServiceReference {
+namespace WSPingPongClient.PingPongServiceReference {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -35,12 +35,12 @@ namespace WSPingPongCSClient.PingPongServiceReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IPingPongServiceChannel : WSPingPongCSClient.PingPongServiceReference.IPingPongService, System.ServiceModel.IClientChannel {
+    public interface IPingPongServiceChannel : WSPingPongClient.PingPongServiceReference.IPingPongService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class PingPongServiceClient : System.ServiceModel.ClientBase<WSPingPongCSClient.PingPongServiceReference.IPingPongService>, WSPingPongCSClient.PingPongServiceReference.IPingPongService {
+    public partial class PingPongServiceClient : System.ServiceModel.ClientBase<WSPingPongClient.PingPongServiceReference.IPingPongService>, WSPingPongClient.PingPongServiceReference.IPingPongService {
         
         public PingPongServiceClient() {
         }
