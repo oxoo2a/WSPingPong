@@ -4,7 +4,7 @@
 
     public class PingPongService : IPingPongService
     {
-        private string _ball;
+        private static string _ball;
 
         /// <summary>
         /// Receives a ball and sets the server-side ball to it.
