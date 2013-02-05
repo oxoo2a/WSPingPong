@@ -1,0 +1,5 @@
+c:\users\raycarter\documents\visual studio 2012\Projects\WSPingPongCS\WSPingPongCS\bin\WSPingPongCS.dll
+c:\users\raycarter\documents\visual studio 2012\Projects\WSPingPongCS\WSPingPongCS\bin\WSPingPongCS.pdb
+c:\users\raycarter\documents\visual studio 2012\Projects\WSPingPongCS\WSPingPongCS\obj\Debug\WSPingPongCS.csprojResolveAssemblyReference.cache
+c:\users\raycarter\documents\visual studio 2012\Projects\WSPingPongCS\WSPingPongCS\obj\Debug\WSPingPongCS.dll
+c:\users\raycarter\documents\visual studio 2012\Projects\WSPingPongCS\WSPingPongCS\obj\Debug\WSPingPongCS.pdb

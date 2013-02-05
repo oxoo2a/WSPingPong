@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://www.test.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="WSPingPongJavaService" targetNamespace="http://www.test.com" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types />
+  <message name="Ball_In">
+    <part name="arg0" type="xsd:string" />
+  </message>
+  <message name="Ball_InResponse" />
+  <message name="Ball_Out" />
+  <message name="Ball_OutResponse">
+    <part name="return" type="xsd:string" />
+  </message>
+  <message name="Ball_Check" />
+  <message name="Ball_CheckResponse">
+    <part name="return" type="xsd:boolean" />
+  </message>
+  <portType name="WSPingPongJavaService">
+    <operation name="Ball_In">
+      <input wsam:Action="http://www.test.com/WSPingPongJavaService/Ball_InRequest" message="tns:Ball_In" />
+      <output wsam:Action="http://www.test.com/WSPingPongJavaService/Ball_InResponse" message="tns:Ball_InResponse" />
+    </operation>
+    <operation name="Ball_Out">
+      <input wsam:Action="http://www.test.com/WSPingPongJavaService/Ball_OutRequest" message="tns:Ball_Out" />
+      <output wsam:Action="http://www.test.com/WSPingPongJavaService/Ball_OutResponse" message="tns:Ball_OutResponse" />
+    </operation>
+    <operation name="Ball_Check">
+      <input wsam:Action="http://www.test.com/WSPingPongJavaService/Ball_CheckRequest" message="tns:Ball_Check" />
+      <output wsam:Action="http://www.test.com/WSPingPongJavaService/Ball_CheckResponse" message="tns:Ball_CheckResponse" />
+    </operation>
+  </portType>
+  <binding name="WSPingPongJavaServicePortBinding" type="tns:WSPingPongJavaService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <operation name="Ball_In">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://www.test.com" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://www.test.com" />
+      </output>
+    </operation>
+    <operation name="Ball_Out">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://www.test.com" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://www.test.com" />
+      </output>
+    </operation>
+    <operation name="Ball_Check">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://www.test.com" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://www.test.com" />
+      </output>
+    </operation>
+  </binding>
+  <service name="WSPingPongJavaService">
+    <port name="WSPingPongJavaServicePort" binding="tns:WSPingPongJavaServicePortBinding">
+      <soap:address location="http://localhost:8080/WSPingPongJavaService" />
+    </port>
+  </service>
+</definitions>

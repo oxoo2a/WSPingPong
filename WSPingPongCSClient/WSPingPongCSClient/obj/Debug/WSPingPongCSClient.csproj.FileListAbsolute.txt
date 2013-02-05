@@ -1,0 +1,6 @@
+c:\users\raycarter\documents\visual studio 2012\Projects\WSPingPongCSClient\WSPingPongCSClient\bin\Debug\WSPingPongCSClient.exe.config
+c:\users\raycarter\documents\visual studio 2012\Projects\WSPingPongCSClient\WSPingPongCSClient\bin\Debug\WSPingPongCSClient.exe
+c:\users\raycarter\documents\visual studio 2012\Projects\WSPingPongCSClient\WSPingPongCSClient\bin\Debug\WSPingPongCSClient.pdb
+c:\users\raycarter\documents\visual studio 2012\Projects\WSPingPongCSClient\WSPingPongCSClient\obj\Debug\WSPingPongCSClient.csprojResolveAssemblyReference.cache
+c:\users\raycarter\documents\visual studio 2012\Projects\WSPingPongCSClient\WSPingPongCSClient\obj\Debug\WSPingPongCSClient.exe
+c:\users\raycarter\documents\visual studio 2012\Projects\WSPingPongCSClient\WSPingPongCSClient\obj\Debug\WSPingPongCSClient.pdb
