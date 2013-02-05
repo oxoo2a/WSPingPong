@@ -11,6 +11,7 @@ packages
 
 # ignore suo files
 *.suo
+*.user
 
 # ignore ReSharper
 _Resharper.WSPingPong
