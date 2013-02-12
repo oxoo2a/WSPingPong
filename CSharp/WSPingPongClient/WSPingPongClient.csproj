@@ -56,7 +56,7 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\PingPongServiceReference\Reference.cs">
+    <Compile Include="Service References\CSharpPingPongService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -64,11 +64,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Service References\PingPongServiceReference\service.wsdl" />
-    <None Include="Service References\PingPongServiceReference\service.xsd">
+    <None Include="Service References\CSharpPingPongService\PingPongService.wsdl" />
+    <None Include="Service References\CSharpPingPongService\wsdl.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\PingPongServiceReference\service1.xsd">
+    <None Include="Service References\CSharpPingPongService\wsdl1.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -76,16 +76,16 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\PingPongServiceReference\" />
+    <WCFMetadataStorage Include="Service References\CSharpPingPongService\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\PingPongServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\CSharpPingPongService\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\PingPongServiceReference\configuration.svcinfo" />
+    <None Include="Service References\CSharpPingPongService\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\PingPongServiceReference\Reference.svcmap">
+    <None Include="Service References\CSharpPingPongService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

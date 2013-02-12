@@ -8,7 +8,7 @@
         static void Main()
         {
             Console.WriteLine("Using C# service...");
-            var csService = new PingPongServiceReference.PingPongServiceClient();
+            var csService = new CSharpPingPongService.PingPongServiceClient();
             
             string ball = "C#_Ball";
             // send a ball to the C# service
