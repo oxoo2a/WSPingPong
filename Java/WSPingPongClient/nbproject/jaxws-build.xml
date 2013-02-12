@@ -35,8 +35,8 @@
     </target>
     <target name="wsimport-client-wsdl" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/wsdl"/>
-        <property name="wsdl-wsdl" location="xml-resources/web-service-references/wsdl/wsdl/localhost_4242/PingPongService/wsdl.wsdl"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/wsdl" destdir="${build.generated.dir}/jax-wsCache/wsdl" wsdl="${wsdl-wsdl}" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://localhost:4242/PingPongService/wsdl?wsdl" xnocompile="true" xendorsed="true" package="edu.asysob.service.csharp">
+        <property name="wsdl-wsdl" location="xml-resources/web-service-references/wsdl/wsdl/localhost_4242/WSPingPong/PingPongService/wsdl.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/wsdl" destdir="${build.generated.dir}/jax-wsCache/wsdl" wsdl="${wsdl-wsdl}" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://localhost:4242/WSPingPong/PingPongService/wsdl" xnocompile="true" xendorsed="true" package="edu.asysob.service.csharp">
             <depends file="${wsdl-wsdl}"/>
             <produces dir="${build.generated.dir}/jax-wsCache/wsdl"/>
         </wsimport>

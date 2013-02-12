@@ -35,8 +35,8 @@
       </wsimport-options>
     </client>
     <client name="wsdl">
-      <wsdl-url>http://localhost:4242/PingPongService/wsdl?wsdl</wsdl-url>
-      <local-wsdl-file>localhost_4242/PingPongService/wsdl.wsdl</local-wsdl-file>
+      <wsdl-url>http://localhost:4242/WSPingPong/PingPongService/wsdl</wsdl-url>
+      <local-wsdl-file>localhost_4242/WSPingPong/PingPongService/wsdl.wsdl</local-wsdl-file>
       <package-name forceReplace="true">edu.asysob.service.csharp</package-name>
       <catalog-file>catalog.xml</catalog-file>
       <wsimport-options>
@@ -50,7 +50,7 @@
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>wsdlLocation</wsimport-option-name>
-          <wsimport-option-value>http://localhost:4242/PingPongService/wsdl?wsdl</wsimport-option-value>
+          <wsimport-option-value>http://localhost:4242/WSPingPong/PingPongService/wsdl</wsimport-option-value>
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>xnocompile</wsimport-option-name>

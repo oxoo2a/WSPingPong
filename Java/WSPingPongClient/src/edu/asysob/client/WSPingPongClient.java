@@ -4,12 +4,11 @@
  */
 package edu.asysob.client;
 
-// java webservice
+// c# and java webservice
+import edu.asysob.service.csharp.IPingPongService;
+import edu.asysob.service.csharp.PingPongService;
 import edu.asysob.service.java.WSPingPong;
 import edu.asysob.service.java.WSPingPong_Service;
-// c# web service
-import edu.asysob.service.csharp.PingPongService;
-import edu.asysob.service.csharp.IPingPongService;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
