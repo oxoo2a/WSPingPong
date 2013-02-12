@@ -26,12 +26,6 @@ namespace WSPingPongClient.CSharpPingPongService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPingPongService/Ball_Out", ReplyAction="http://tempuri.org/IPingPongService/Ball_OutResponse")]
         System.Threading.Tasks.Task<string> Ball_OutAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPingPongService/Ball_Available", ReplyAction="http://tempuri.org/IPingPongService/Ball_AvailableResponse")]
-        bool Ball_Available();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPingPongService/Ball_Available", ReplyAction="http://tempuri.org/IPingPongService/Ball_AvailableResponse")]
-        System.Threading.Tasks.Task<bool> Ball_AvailableAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -75,14 +69,6 @@ namespace WSPingPongClient.CSharpPingPongService {
         
         public System.Threading.Tasks.Task<string> Ball_OutAsync() {
             return base.Channel.Ball_OutAsync();
-        }
-        
-        public bool Ball_Available() {
-            return base.Channel.Ball_Available();
-        }
-        
-        public System.Threading.Tasks.Task<bool> Ball_AvailableAsync() {
-            return base.Channel.Ball_AvailableAsync();
         }
     }
 }

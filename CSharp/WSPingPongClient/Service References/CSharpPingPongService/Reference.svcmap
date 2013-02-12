@@ -19,12 +19,12 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:4242/PingPongService/wsdl?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:4242/WSPingPong/PingPongService/wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="PingPongService.wsdl" MetadataType="Wsdl" ID="6d9e2cf5-690c-446f-b736-43574e6066f8" SourceId="1" SourceUrl="http://localhost:4242/PingPongService/wsdl?wsdl" />
-    <MetadataFile FileName="wsdl.xsd" MetadataType="Schema" ID="f725dde8-1b81-4ca5-96a7-f5d5802e5cd7" SourceId="1" SourceUrl="http://localhost:4242/PingPongService/wsdl?xsd=xsd0" />
-    <MetadataFile FileName="wsdl1.xsd" MetadataType="Schema" ID="d6c6328f-3ff3-47f1-a4ff-3b922eaed988" SourceId="1" SourceUrl="http://localhost:4242/PingPongService/wsdl?xsd=xsd1" />
+    <MetadataFile FileName="PingPongService1.wsdl" MetadataType="Wsdl" ID="079fd884-3e73-4458-b4f9-100748d2c27d" SourceId="1" SourceUrl="http://localhost:4242/WSPingPong/PingPongService/wsdl" />
+    <MetadataFile FileName="wsdl2.xsd" MetadataType="Schema" ID="bb0a8ab5-021b-4c0e-b3dd-a7b7ed9eb043" SourceId="1" SourceUrl="http://localhost:4242/WSPingPong/PingPongService/wsdl?xsd=xsd1" />
+    <MetadataFile FileName="wsdl21.xsd" MetadataType="Schema" ID="2fefa81d-18f7-4f3d-bc47-24d76bfdbf41" SourceId="1" SourceUrl="http://localhost:4242/WSPingPong/PingPongService/wsdl?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

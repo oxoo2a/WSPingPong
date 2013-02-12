@@ -8,14 +8,14 @@
     {
         static void Main()
         {
-            var baseAddress = new Uri("http://localhost:4242/PingPongService");
+            var baseAddress = new Uri("http://localhost:4242/WSPingPong/PingPongService/");
             var host = new ServiceHost(typeof (WSPingPong.PingPongService), baseAddress);
 
             // use MEX to test the WS via browser
             var mexBehavior = new ServiceMetadataBehavior
                                   {
                                       HttpGetEnabled = true,
-                                      HttpGetUrl = new Uri("http://localhost:4242/PingPongService/wsdl")
+                                      HttpGetUrl = new Uri("http://localhost:4242/WSPingPong/PingPongService/wsdl")
                                   };
 
             host.Description.Behaviors.Add(mexBehavior);

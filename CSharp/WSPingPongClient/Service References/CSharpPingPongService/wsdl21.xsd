@@ -24,16 +24,4 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="Ball_Available">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Ball_AvailableResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="Ball_AvailableResult" type="xs:boolean" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
 </xs:schema>

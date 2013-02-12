@@ -64,11 +64,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Service References\CSharpPingPongService\PingPongService.wsdl" />
-    <None Include="Service References\CSharpPingPongService\wsdl.xsd">
+    <None Include="Service References\CSharpPingPongService\wsdl2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\CSharpPingPongService\wsdl1.xsd">
+    <None Include="Service References\CSharpPingPongService\wsdl21.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -85,6 +84,7 @@
     <None Include="Service References\CSharpPingPongService\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Service References\CSharpPingPongService\PingPongService1.wsdl" />
     <None Include="Service References\CSharpPingPongService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
