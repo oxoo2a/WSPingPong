@@ -20,12 +20,6 @@
         [OperationContract]
         string Ball_Out(); // no ball arrived if the empty string is returned.
 
-        /// <summary>
-        /// Checks whether there is a server-side ball available to send out.
-        /// </summary>
-        /// <returns>Whether there exists a ball on the server.</returns>
-        [OperationContract]
-        bool Ball_Available();
     }
 
 }

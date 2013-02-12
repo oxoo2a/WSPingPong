@@ -17,13 +17,6 @@
 
             Thread.Sleep(1000);
 
-            Console.WriteLine("Check whether ball exists.");
-            Console.WriteLine(csService.Ball_Available()
-                                  ? "Ball exists on the server!"
-                                  : "Ball does NOT exist on the server!");
-
-            Thread.Sleep(1000);
-
             Console.WriteLine("Get the ball from the C# service.");
             ball = csService.Ball_Out();
             Console.WriteLine("Got the ball: {0}", ball);
@@ -31,27 +24,22 @@
             Console.WriteLine("Press 'ANY KEY' to terminate...");
             Console.ReadKey();
 
-            //while (true)
-            //{
-            //ball = javaClient.Ball_Out();
-            //if (ball != "" && ball.Length > 0)
-            //{
+            //Console.WriteLine("Using Java service...");
+            //var javaService = new JavaPingPongService.WSPingPongClient();
 
-            //while (true) //warten, bis kein Ball auf dem Server liegt.
-            //{
-            //if (csService.Ball_Available())
-            //{
-            //    csService.Ball_In(ball);
-            //    ball = "";
-            //    break;
-            //}
-            //Thread.Sleep(1000);
-            //    }
-            //}
+            //ball = "Java_Ball";
+            //// send a ball to the Java service
+            //Console.WriteLine("Send the ball ({0}) to the Java service.", ball);
+            //javaService.Ball_In(ball);
 
             //Thread.Sleep(1000);
-            //}
 
+            //Console.WriteLine("Get the ball from the Java service.");
+            //ball = javaService.Ball_Out();
+            //Console.WriteLine("Got the ball: {0}", ball);
+
+            //Console.WriteLine("Press 'ANY KEY' to terminate...");
+            //Console.ReadKey();
         }
     }
 }

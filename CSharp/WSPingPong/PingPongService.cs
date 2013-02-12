@@ -28,13 +28,5 @@
             return ret;
         }
 
-        /// <summary>
-        /// Checks whether there is a server-side ball available to send out.
-        /// </summary>
-        /// <returns>Whether there exists a ball on the server.</returns>
-        public bool Ball_Available()
-        {
-            return ((!String.IsNullOrEmpty(_ball)) && (_ball.Length > 0));
-        }
     }
 }
