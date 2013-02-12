@@ -6,12 +6,6 @@
 
 <xs:element name="Ball_OutResponse" type="tns:Ball_OutResponse"/>
 
-<xs:complexType name="Ball_In">
-<xs:sequence>
-<xs:element name="ball" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
 <xs:complexType name="Ball_Out">
 <xs:sequence/>
 </xs:complexType>
@@ -19,6 +13,12 @@
 <xs:complexType name="Ball_OutResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Ball_In">
+<xs:sequence>
+<xs:element name="ball" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 </xs:schema>

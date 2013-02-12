@@ -4,26 +4,32 @@
 <xsd:import namespace="http://service.asysob.edu/" schemaLocation="http://localhost:8080/WSPingPong/WSPingPong?xsd=1"/>
 </xsd:schema>
 </types>
+<message name="Ball_In">
+<part name="parameters" element="tns:Ball_In"/>
+</message>
 <message name="Ball_Out">
 <part name="parameters" element="tns:Ball_Out"/>
 </message>
 <message name="Ball_OutResponse">
 <part name="parameters" element="tns:Ball_OutResponse"/>
 </message>
-<message name="Ball_In">
-<part name="parameters" element="tns:Ball_In"/>
-</message>
 <portType name="WSPingPong">
+<operation name="Ball_In">
+<input wsam:Action="http://service.asysob.edu/WSPingPong/Ball_In" message="tns:Ball_In"/>
+</operation>
 <operation name="Ball_Out">
 <input wsam:Action="http://service.asysob.edu/WSPingPong/Ball_OutRequest" message="tns:Ball_Out"/>
 <output wsam:Action="http://service.asysob.edu/WSPingPong/Ball_OutResponse" message="tns:Ball_OutResponse"/>
 </operation>
-<operation name="Ball_In">
-<input wsam:Action="http://service.asysob.edu/WSPingPong/Ball_In" message="tns:Ball_In"/>
-</operation>
 </portType>
 <binding name="WSPingPongPortBinding" type="tns:WSPingPong">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+<operation name="Ball_In">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+</operation>
 <operation name="Ball_Out">
 <soap:operation soapAction=""/>
 <input>
@@ -32,12 +38,6 @@
 <output>
 <soap:body use="literal"/>
 </output>
-</operation>
-<operation name="Ball_In">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
 </operation>
 </binding>
 <service name="WSPingPong">

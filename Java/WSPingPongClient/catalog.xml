@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
     <system systemId="http://localhost:8080/WSPingPong/WSPingPong?WSDL" uri="xml-resources/web-service-references/WSPingPong/wsdl/localhost_8080/WSPingPong/WSPingPong.wsdl"/>
+    <system systemId="http://localhost:8080/WSPingPong/WSPingPong?wsdl" uri="xml-resources/web-service-references/WSPingPong/wsdl/localhost_8080/WSPingPong/WSPingPong.wsdl"/>
     <system systemId="http://localhost:8080/WSPingPong/WSPingPong?xsd=1" uri="xml-resources/web-service-references/WSPingPong/wsdl/localhost_8080/WSPingPong/WSPingPong.xsd_1.xsd"/>
+    <system systemId="http://localhost:4242/PingPongService/wsdl?wsdl" uri="xml-resources/web-service-references/wsdl/wsdl/localhost_4242/PingPongService/wsdl.wsdl"/>
+    <system systemId="http://localhost:4242/PingPongService/wsdl?xsd=xsd0" uri="xml-resources/web-service-references/wsdl/wsdl/localhost_4242/PingPongService/wsdl.xsd_xsd0.xsd"/>
+    <system systemId="http://localhost:4242/PingPongService/wsdl?xsd=xsd1" uri="xml-resources/web-service-references/wsdl/wsdl/localhost_4242/PingPongService/wsdl.xsd_xsd1.xsd"/>
 </catalog>

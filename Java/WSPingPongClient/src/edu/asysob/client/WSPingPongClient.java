@@ -4,8 +4,14 @@
  */
 package edu.asysob.client;
 
-import edu.asysob.servicereference.WSPingPong;
-import edu.asysob.servicereference.WSPingPong_Service;
+// java webservice
+import edu.asysob.service.java.WSPingPong;
+import edu.asysob.service.java.WSPingPong_Service;
+// c# web service
+import edu.asysob.service.csharp.PingPongService;
+import edu.asysob.service.csharp.IPingPongService;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -15,24 +21,43 @@ public class WSPingPongClient {
 
     /**
      * Aufruf von Tester und wsdl File:
-     * http://localhost:8080/WSPingPong/WSPingPong?Tester
-     * http://localhost:8080/WSPingPong/WSPingPong?WSDL
+     * http://localhost:8080/WSPingPong/WSPingPong?WSDL fuer Java
+     *
+     * und
+     *
+     * http://localhost:4242/PingPongService/wsdl?wsdl fuer C#
      */
-    
     public static void main(String[] args) {
-        WSPingPong_Service service = new WSPingPong_Service();
-        WSPingPong pingpong = service.getWSPingPongPort();
+        WSPingPong_Service javaService = new WSPingPong_Service();
+        WSPingPong javaPingPong = javaService.getWSPingPongPort();
 
-        String ball = "ball";
-        String ball2;
+        PingPongService csharpService = new PingPongService();
+        IPingPongService csharpPingPong = csharpService.getWSHttpBindingIPingPongService();
 
-        for (int i = 0; i < 5; i++) {
-            pingpong.ballIn(ball);
-            ball = pingpong.ballOut();
-            System.out.println("Hier ist der Ball: " + ball);
+        String ball = "JavaBall";
 
-            ball2 = pingpong.ballOut();
-            System.out.println("Jetzt ist der Ball weg: " + ball2);
+        // start throwing ball to java service
+        javaPingPong.ballIn(ball);
+        while (true) {
+            // sent java ball to c#
+            csharpPingPong.ballIn(ball);
+            // then try to get a ball from c# service
+            do {
+                ball = csharpPingPong.ballOut();
+                sleepSomeTime();
+            } while (ball.equals(""));
+            // sent c# ball to java
+            javaPingPong.ballIn(ball);
+            sleepSomeTime();
+        }
+
+    }
+
+    private static void sleepSomeTime() {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(WSPingPongClient.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }

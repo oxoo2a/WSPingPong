@@ -2,4 +2,8 @@
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
     <system systemId="http://localhost:8080/WSPingPong/WSPingPong?WSDL" uri="wsdl/localhost_8080/WSPingPong/WSPingPong.wsdl"/>
     <system systemId="http://localhost:8080/WSPingPong/WSPingPong?xsd=1" uri="wsdl/localhost_8080/WSPingPong/WSPingPong.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/WSPingPong/WSPingPong?wsdl" uri="wsdl/localhost_8080/WSPingPong/WSPingPong.wsdl"/>
+    <system systemId="http://localhost:4242/PingPongService/wsdl?wsdl" uri="wsdl/localhost_4242/PingPongService/wsdl.wsdl"/>
+    <system systemId="http://localhost:4242/PingPongService/wsdl?xsd=xsd0" uri="wsdl/localhost_4242/PingPongService/wsdl.xsd_xsd0.xsd"/>
+    <system systemId="http://localhost:4242/PingPongService/wsdl?xsd=xsd1" uri="wsdl/localhost_4242/PingPongService/wsdl.xsd_xsd1.xsd"/>
 </catalog>

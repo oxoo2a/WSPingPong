@@ -19,7 +19,7 @@
     <target name="wsimport-client-WSPingPong" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/WSPingPong"/>
         <property name="wsdl-WSPingPong" location="xml-resources/web-service-references/WSPingPong/wsdl/localhost_8080/WSPingPong/WSPingPong.wsdl"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/WSPingPong" destdir="${build.generated.dir}/jax-wsCache/WSPingPong" wsdl="${wsdl-WSPingPong}" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://localhost:8080/WSPingPong/WSPingPong?WSDL" xnocompile="true" xendorsed="true" package="edu.asysob.servicereference">
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/WSPingPong" destdir="${build.generated.dir}/jax-wsCache/WSPingPong" wsdl="${wsdl-WSPingPong}" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://localhost:8080/WSPingPong/WSPingPong?wsdl" xnocompile="true" xendorsed="true" package="edu.asysob.service.java">
             <depends file="${wsdl-WSPingPong}"/>
             <produces dir="${build.generated.dir}/jax-wsCache/WSPingPong"/>
         </wsimport>
@@ -31,7 +31,24 @@
     </target>
     <target name="wsimport-client-clean-WSPingPong" depends="-init-project">
         <delete dir="${build.generated.dir}/jax-wsCache/WSPingPong"/>
-        <delete dir="${build.generated.sources.dir}/jax-ws/edu/asysob/servicereference"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/edu/asysob/service/java"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-WSPingPong"/>
+    <target name="wsimport-client-wsdl" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/wsdl"/>
+        <property name="wsdl-wsdl" location="xml-resources/web-service-references/wsdl/wsdl/localhost_4242/PingPongService/wsdl.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/wsdl" destdir="${build.generated.dir}/jax-wsCache/wsdl" wsdl="${wsdl-wsdl}" catalog="catalog.xml" extension="true" verbose="true" wsdlLocation="http://localhost:4242/PingPongService/wsdl?wsdl" xnocompile="true" xendorsed="true" package="edu.asysob.service.csharp">
+            <depends file="${wsdl-wsdl}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/wsdl"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/wsdl">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-wsdl" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/wsdl"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/edu/asysob/service/csharp"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-WSPingPong, wsimport-client-wsdl"/>
 </project>
